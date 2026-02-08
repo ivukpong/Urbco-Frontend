@@ -73,13 +73,13 @@ const MobileHome = () => {
 			</div>
 			<div className="mobile-footer">
 				<div className="socials">
-					<a href="https://twitter.com" target="_blank">
+					<a href="https://twitter.com" target="_blank" rel="noreferrer">
 						<BsTwitter />
 					</a>
-					<a href="https://facebook.com" target="_blank">
+					<a href="https://facebook.com" target="_blank" rel="noreferrer">
 						<BsFacebook />
 					</a>
-					<a href="https://instagram.com" target="_blank">
+					<a href="https://instagram.com" target="_blank" rel="noreferrer">
 						<BsInstagram />
 					</a>
 				</div>

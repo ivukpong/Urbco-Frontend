@@ -114,15 +114,11 @@ const LandingPage = () => {
 					</div>
 					{openMenu && <Menu close={() => setOpenMenu(false)} />}
 					<div className="quote">
-						<marquee behavior="scroll" direction="left">
+						<div className="quote-text">
 							{settings && settings.quote
 								? `"${settings.quote}"`
-								: `“Real estate is aN imperishable asset, ever
-							increasing in value. It is the most solid security
-							that human ingenuity has devised. It is the basis of
-							all security and about the only indestructible
-							security.”`}
-						</marquee>
+								: `“Real estate is aN imperishable asset, ever increasing in value. It is the most solid security that human ingenuity has devised. It is the basis of all security and about the only indestructible security.”`}
+						</div>
 					</div>
 				</div>
 			</div>

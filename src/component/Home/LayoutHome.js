@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import Logo from "../../assets/logo.svg";
 import MenuBtn from "../../assets/menu-dark.svg";
 import Menu from "../Menu";
-import { FiArrowRight } from "react-icons/fi";
+// import { FiArrowRight } from "react-icons/fi";
 
 const LayoutHome = ({ children }) => {
 	const [openMenu, setOpenMenu] = useState(false);
