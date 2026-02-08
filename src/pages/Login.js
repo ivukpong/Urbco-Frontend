@@ -6,10 +6,7 @@ import {
 	useSearchParams,
 } from "react-router-dom";
 import Logo from "../assets/logo.svg";
-import { displayError } from "../redux/error";
-import basicService from "../redux/basic/basicService";
 import { FiEye, FiEyeOff } from "react-icons/fi";
-import { toast } from "react-hot-toast";
 import { useDispatch, useSelector } from "react-redux";
 import { loginInvestor } from "../redux/basic/basicSlice";
 

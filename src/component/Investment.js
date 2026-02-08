@@ -9,7 +9,7 @@ const Investment = ({ item }) => {
 
 	return (
 		<div className="property-detail">
-			<img src={item.property.images[0].url} alt="Property Image" />
+			<img src={item.property.images[0].url} alt="" />
 			<div className="detail">
 				<h5>{item.property.name}</h5>
 				<div className="list">

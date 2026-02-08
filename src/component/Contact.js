@@ -11,7 +11,7 @@ const Contact = () => {
 	const [email, setEmail] = useState("");
 	const [comment, setComment] = useState("");
 	const [phone, setPhone] = useState("");
-	const [check, setCheck] = useState(false);
+	// const [check, setCheck] = useState(false);
 	const [load, setLoad] = useState(false);
 
 	useEffect(() => {

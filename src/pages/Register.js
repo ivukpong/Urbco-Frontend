@@ -11,11 +11,11 @@ import { displayError } from "../redux/error";
 import basicService from "../redux/basic/basicService";
 import { toast } from "react-hot-toast";
 
-const types = [
-	{ id: 1, name: "individual" },
-	{ id: 2, name: "couple" },
-	{ id: 3, name: "business" },
-];
+// const types = [
+//     { id: 1, name: "individual" },
+//     { id: 2, name: "couple" },
+//     { id: 3, name: "business" },
+// ];
 
 const Register = () => {
 	const navigate = useNavigate();

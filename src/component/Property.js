@@ -10,7 +10,7 @@ const Property = ({ item }) => {
 		<div className="property-detail">
 			<img
 				src={item.images.length > 0 ? item.images[0].url : PropertyImg}
-				alt="Property Image"
+				alt=""
 				onClick={() =>
 					navigate(`/projects/${item.ref}`, {
 						state: { property: item },
@@ -26,7 +26,7 @@ const Property = ({ item }) => {
 					}}
 				/> */}
 				<p className="area">
-					<img src={AreaImg} alt="Sq" />
+					<img src={AreaImg} alt="" />
 					<span>{item.areaSqm} Sq Ft</span> Area
 				</p>
 				<div className="status">

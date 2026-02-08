@@ -47,17 +47,17 @@ const Profile = () => {
 		}
 	};
 
-	const editHandler = () => {
-		// let data = {
-		// 	title,
-		// 	user_type: userType,
-		// 	first_name: firstName,
-		// 	last_name: lastName,
-		// 	phone,
-		// 	email,
-		// 	date_of_birth: dateOfBirth,
-		// 	marital_status: maritalStatus,
-		// 	gender,
+	// const editHandler = () => {
+	//     // let data = {
+	//     //  title,
+	//     //  user_type: userType,
+	//     //  first_name: firstName,
+	//     //  last_name: lastName,
+	//     //  phone,
+	//     //  email,
+	//     //  date_of_birth: dateOfBirth,
+	//     //  marital_status: maritalStatus,
+	//     //  gender,
 		// 	address,
 		// 	business_name: businessName,
 		// 	business_reg_no: businessReg,
