@@ -17,37 +17,7 @@ const CheckoutView = ({ propertyDetail, onComplete }) => {
 		propertyDetail.total_fractions - propertyDetail.fractions_taken
 	);
 
-	useEffect(() => {
-		if (plan) {
-			getAmountToPay();
-			getAvailableBalance();
-		}
-	}, [noOfFractions, plan, percentage, getAmountToPay]);
-
-	useEffect(() => {
-		if (
-			propertyDetail.investment_plan === "optp" &&
-			propertyDetail.investment
-		) {
-			setPlan("optp");
-			setPercentage(propertyDetail.next_payment);
-			setNoOfFractions(propertyDetail.fractions_bought);
-		}
-	}, [propertyDetail.fractions_bought]);
-
-	const getAvailableBalance = () => {
-		if (plan) {
-			let availableFractions = Math.round(
-				propertyDetail.total_fractions *
-					(propertyDetail[plan].volume_available / 100)
-			);
-			setAvailable(
-				availableFractions - propertyDetail[plan].fractions_taken
-			);
-		}
-	};
-
-	const getAmountToPay = () => {
+		const getAmountToPay = () => {
 		let totalAmount = propertyDetail.cost_per_fraction * noOfFractions;
 		let amountPaid;
 		if (plan === "csp") {
@@ -74,6 +44,38 @@ const CheckoutView = ({ propertyDetail, onComplete }) => {
 		}
 		setAmount(amountPaid);
 	};
+	
+	useEffect(() => {
+		if (plan) {
+			getAmountToPay();
+			getAvailableBalance();
+		}
+	}, [noOfFractions, plan, percentage, getAmountToPay]);
+
+	useEffect(() => {
+		if (
+			propertyDetail.investment_plan === "optp" &&
+			propertyDetail.investment
+		) {
+			setPlan("optp");
+			setPercentage(propertyDetail.next_payment);
+			setNoOfFractions(propertyDetail.fractions_bought);
+		}
+	}, [propertyDetail.fractions_bought, propertyDetail.investment]);
+
+	const getAvailableBalance = () => {
+		if (plan) {
+			let availableFractions = Math.round(
+				propertyDetail.total_fractions *
+					(propertyDetail[plan].volume_available / 100)
+			);
+			setAvailable(
+				availableFractions - propertyDetail[plan].fractions_taken
+			);
+		}
+	};
+
+
 
 	const initiatePayment = async () => {
 		if (amount > 0) {
