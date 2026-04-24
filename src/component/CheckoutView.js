@@ -76,8 +76,6 @@ const CheckoutView = ({ propertyDetail, onComplete }) => {
     propertyDetail.next_payment,
   ]);
 
-
-
   const initiatePayment = async () => {
     if (amount > 0) {
       if (noOfFractions > available) {
